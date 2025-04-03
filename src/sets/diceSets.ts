@@ -14,14 +14,14 @@ import * as walnutPreviews from "../previews/walnut";
 import allPreview from "../previews/all.png";
 
 const standardPreviews: Record<DiceStyle, string> = {
-  GALAXY: galaxyPreviews.D20,
-  GEMSTONE: gemstonePreviews.D20,
-  GLASS: glassPreviews.D20,
-  IRON: ironPreviews.D20,
-  NEBULA: nebulaPreviews.D20,
-  SUNRISE: sunrisePreviews.D20,
-  SUNSET: sunsetPreviews.D20,
-  WALNUT: walnutPreviews.D20,
+  GALAXY: galaxyPreviews.D12,
+  GEMSTONE: gemstonePreviews.D12,
+  GLASS: glassPreviews.D12,
+  IRON: ironPreviews.D12,
+  NEBULA: nebulaPreviews.D12,
+  SUNRISE: sunrisePreviews.D12,
+  SUNSET: sunsetPreviews.D12,
+  WALNUT: walnutPreviews.D12,
 };
 
 function createStandardSet(style: DiceStyle): DiceSet {
@@ -30,6 +30,7 @@ function createStandardSet(style: DiceStyle): DiceSet {
     id,
     name: `${style.toLowerCase()} dice`,
     dice: [
+      { id: `${id}_WD`, type: "WD", style },
       { id: `${id}_D4`, type: "D4", style },
       { id: `${id}_D6`, type: "D6", style },
       { id: `${id}_D8`, type: "D8", style },
