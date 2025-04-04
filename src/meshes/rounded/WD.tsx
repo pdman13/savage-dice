@@ -7,22 +7,22 @@ import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 
-import glb from "./d6.glb";
+import glb from "./wd.glb";
 
 type GLTFResult = GLTF & {
   nodes: {
-    d6: THREE.Mesh;
+    wd: THREE.Mesh;
   };
   materials: {};
 };
 
-export const D6 = React.forwardRef<THREE.Group, JSX.IntrinsicElements["group"]>(
+export const WD = React.forwardRef<THREE.Group, JSX.IntrinsicElements["group"]>(
   ({ children, ...props }, ref) => {
     const { nodes } = useGLTF(glb) as unknown as GLTFResult;
     return (
       <group ref={ref} {...props} scale={0.1} dispose={null}>
         <group name="dice">
-          <mesh name="d6" castShadow receiveShadow geometry={nodes.d6.geometry}>
+          <mesh name="wd" castShadow receiveShadow geometry={nodes.d6.geometry}>
             {children}
             <group
               name="006_locator_1"

@@ -5,9 +5,12 @@ import { D20Collider } from "./D20Collider";
 import { D4Collider } from "./D4Collider";
 import { D6Collider } from "./D6Collider";
 import { D8Collider } from "./D8Collider";
+import { WDCollider } from "./WDCollider";
 
 export function DiceCollider({ diceType }: { diceType: DiceType }) {
   switch (diceType) {
+    case "WD":
+      return <WDCollider />;
     case "D4":
       return <D4Collider />;
     case "D6":
